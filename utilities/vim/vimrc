@@ -1,0 +1,143 @@
+"disable vi-compatibility
+set nocompatible
+"enable syntax highlighting
+syntax on
+"set the colorscheme
+colorscheme atom-dark
+"set the background variant
+set background=dark
+"show the current mode
+set showmode
+"don't wrap lines
+set nowrap
+"enable mouse support
+set mouse=a
+"disable delay when using `shift-o`
+set noesckeys
+"use os-x clipboard
+set clipboard=unnamed
+"save file when switching buffer
+set autowrite
+"disable line numbers
+set number
+"show line and column number
+set ruler
+"only show status if two windows
+set laststatus=1
+" Maximum width of text that is being inserted
+set textwidth=80
+
+" Always open vertically split files on the right-hand side
+set splitright
+
+" no swapfiles/backups
+set noswapfile
+set nobackup
+set nowb
+
+"remapping escape to jk
+inoremap jk <esc>
+inoremap kj <esc>
+
+"insert 2 columns of text with reindent option
+set shiftwidth=2
+"use 2 spaces for indentation
+set softtabstop=2
+"pressing tab uses spaces instead of a tab
+set expandtab
+"copy indentation from previous line when starting a new line
+set autoindent
+"indent according to the C standard for C-like languages
+set cindent
+
+
+
+"hide vertical split divider
+hi LineNr guibg=bg
+set foldcolumn=2
+hi foldcolumn guibg=bg
+hi VertSplit guibg=bg guifg=bg
+"make the statusline transparent
+hi StatusLine ctermbg=NONE ctermfg=NONE
+hi StatusLine guibg=NONE guifg=white
+
+"filetype specific options.
+autocmd FileType c          setlocal sw=2 sts=2
+autocmd FileType cpp        setlocal sw=2 sts=2
+autocmd Filetype ruby       setlocal sw=2 sts=2
+autocmd Filetype css        setlocal sw=2 sts=2
+autocmd Filetype less       setlocal sw=2 sts=2
+autocmd FileType ocaml      setlocal sw=2 sts=2
+autocmd FileType javascript setlocal sw=2 sts=2
+autocmd FileType html       setlocal sw=2 sts=2
+autocmd FileType go         setlocal sw=4 ts=4
+autocmd FileType snippet    setlocal sw=4 ts=4
+autocmd FileType vim        setlocal sw=2 ts=2
+
+"plugins
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'fatih/vim-go'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-rooter'
+Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'schickling/vim-bufonly'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Yggdroot/indentLine'
+"Plugin 'vim-scripts/zoom.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+"set <leader>
+let mapleader = ','
+"press ,ev to edit .vimrc
+nmap <leader>ev :edit ~/.vimrc<cr>
+"press ,eb to edit .bashrc
+nmap <leader>eb :edit ~/.bashrc<cr>
+
+"Ctrl p mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Use this option to change the mapping to invoke CtrlP in |Normal| mode:
+let g:ctrlp_map = '<Leader>t'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.DS_Store
+
+"Syntastic Plugin
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers = ['tidy']
+
+
+" In addition to |'wildignore'|, use this for files and directories you want
+" only CtrlP to not show. Use regexp to specify the patterns:
+let g:ctrlp_custom_ignore = '\.meteor\|\.git\|\.svn\|\.demeteorized\|\.log\|.DS_Store\|node_modules\|vendor\|data\|dump\|.gagarin'
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_max_files=20000
+
+"Change Emmet leader key
+"let g:user_emmet_leader_key='<C-Z>'
+
+
+"Hav jsx plugin work on js files as well
+let g:jsx_ext_required = 0
