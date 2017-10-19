@@ -16,6 +16,6 @@
 	alias nom='npm'
 	alias gti='git'
 #TODO.TxT --------------------------------------
-alias t='/usr/local/bin/todo.sh -c -d /Users/joshgerding/dotfiles/utilities/todoTxt/config'
+alias t='/usr/local/bin/todo.sh -c -d $HOME/dotfiles/utilities/todoTxt/config'
 
 #PROJECT CONFIGURATION ALIASES ------------------

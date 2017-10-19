@@ -9,11 +9,11 @@
   "highlight": true, 
   "journals": {
     "default": {
-      "journal": "/Users/joshgerding/Dropbox/journals/journal.txt", 
+      "journal": "~/Dropbox/journals/journal.txt", 
       "encrypt": true
     }, 
     "work": {
-      "journal": "/Users/joshgerding/Dropbox/journals/work.txt", 
+      "journal": "~/Dropbox/journals/work.txt", 
       "encrypt": true
     }
   }

@@ -3,7 +3,7 @@
 	export CLICOLOR=1
 	export LSCOLORS=GxFxCxDxBxegedabagaced
 
-        export ANDROID_HOME=/Users/joshgerding/Library/Android/sdk
+        export ANDROID_HOME=$HOME/Library/Android/sdk
         export GOPATH=$HOME/Application_Development/go
 
         export TODOTXT_DEFAULT_ACTION=ls
