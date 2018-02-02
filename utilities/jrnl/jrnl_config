@@ -1,7 +1,7 @@
 {
   "default_hour": 9, 
   "linewrap": 79, 
-  "encrypt": true, 
+  "encrypt": false, 
   "default_minute": 0, 
   "tagsymbols": "@", 
   "editor": "vim", 
@@ -9,11 +9,11 @@
   "highlight": true, 
   "journals": {
     "default": {
-      "journal": "~/Dropbox/journals/journal.txt", 
+      "journal": "~/Dropbox/journals/journal.txt",
       "encrypt": true
     }, 
     "work": {
-      "journal": "~/Dropbox/journals/work.txt", 
+      "journal": "~/Dropbox/journals/work.txt",
       "encrypt": true
     }
   }

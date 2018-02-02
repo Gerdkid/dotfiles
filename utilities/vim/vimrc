@@ -3,7 +3,7 @@ set nocompatible
 "enable syntax highlighting
 syntax on
 "set the colorscheme
-colorscheme atom-dark
+colorscheme molokai
 "set the background variant
 set background=dark
 "show the current mode
@@ -80,8 +80,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-vinegar'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'fatih/vim-go'
 Plugin 'StanAngeloff/php.vim'
@@ -96,7 +96,7 @@ Plugin 'schickling/vim-bufonly'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/indentLine'
-"Plugin 'vim-scripts/zoom.vim'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -107,13 +107,6 @@ let mapleader = ','
 nmap <leader>ev :edit ~/.vimrc<cr>
 "press ,eb to edit .bashrc
 nmap <leader>eb :edit ~/.bashrc<cr>
-
-"Ctrl p mappings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-" Use this option to change the mapping to invoke CtrlP in |Normal| mode:
-let g:ctrlp_map = '<Leader>t'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.DS_Store
 
 "Syntastic Plugin
 set statusline+=%#warningmsg#
@@ -127,16 +120,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['tidy']
 
-
-" In addition to |'wildignore'|, use this for files and directories you want
-" only CtrlP to not show. Use regexp to specify the patterns:
-let g:ctrlp_custom_ignore = '\.meteor\|\.git\|\.svn\|\.demeteorized\|\.log\|.DS_Store\|node_modules\|vendor\|data\|dump\|.gagarin'
-let g:ctrlp_follow_symlinks=1
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_max_files=20000
-
 "Change Emmet leader key
-"let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key='<Leader>e'
 
 
 "Hav jsx plugin work on js files as well
