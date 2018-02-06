@@ -50,8 +50,6 @@ set autoindent
 "indent according to the C standard for C-like languages
 set cindent
 
-
-
 "hide vertical split divider
 hi LineNr guibg=bg
 set foldcolumn=2
@@ -73,6 +71,7 @@ autocmd FileType html       setlocal sw=2 sts=2
 autocmd FileType go         setlocal sw=4 ts=4
 autocmd FileType snippet    setlocal sw=4 ts=4
 autocmd FileType vim        setlocal sw=2 ts=2
+autocmd FileType css        setlocal sw=2 sts=2
 
 "plugins
 filetype off
@@ -97,6 +96,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/indentLine'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'moll/vim-node'
 
 call vundle#end()
 filetype plugin indent on
