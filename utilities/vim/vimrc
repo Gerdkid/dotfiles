@@ -97,6 +97,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Yggdroot/indentLine'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'moll/vim-node'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
@@ -123,6 +124,12 @@ let g:syntastic_html_checkers = ['tidy']
 "Change Emmet leader key
 let g:user_emmet_leader_key='<Leader>e'
 
+let g:netrw_liststyle = 3
+
+augroup spellcheck_documentation
+  autocmd BufNewFile,BufRead *.md setlocal spell
+  autocmd BufNewFile,BufRead *.rdoc setlocal spell
+augroup END
 
 "Hav jsx plugin work on js files as well
 let g:jsx_ext_required = 0
